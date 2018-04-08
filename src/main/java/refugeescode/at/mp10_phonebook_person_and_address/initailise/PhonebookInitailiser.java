@@ -28,7 +28,8 @@ public class PhonebookInitailiser {
     private List<Contact> createContact() {
         return Stream.of(
                 new Contact("thaer", (long) 2222),
-                new Contact("joelle", (long) 444)
+                new Contact("joelle", (long) 444),
+                new Contact("rana", (long) 222)
 
 
         ).collect(Collectors.toList());
