@@ -7,7 +7,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
-public class Mp10PhonebookPersonAndAddressApplicationTests {
+public class Mp10ContactPersonAndAddressApplicationTests {
 
 	@Test
 	public void contextLoads() {
