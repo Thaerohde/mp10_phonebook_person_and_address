@@ -1,5 +1,4 @@
-package refugeescode.at.mp10_phonebook_person_and_address.model;
-
+package refugeescode.at.mp10_phonebook_person_and_address.repository;
 
 import javax.persistence.*;
 
@@ -11,16 +10,8 @@ public class Contact {
 
     private String contact;
 
-
     @OneToOne(cascade = CascadeType.ALL)
-    private Long phoneNumber;
-
-    public Contact(String contact, Long phoneNumber) {
-        this.phoneNumber=phoneNumber;
-        this.contact = contact;
-    }
-
-
+    private Address address;
 
     public String getContact() {
         return contact;
@@ -38,14 +29,18 @@ public class Contact {
         this.id = id;
     }
 
-    public void setPhoneNumber(Long phoneNumber) {
-        this.phoneNumber = phoneNumber;
+    public Address getAddress() {
+        return address;
+    }
+
+    public void setAddress(Address address) {
+        this.address = address;
     }
 
     @Override
 
     public String toString() {
-        return "Contact{" + "id" + " contact is '" + contact + '\'' + "Phone number is: " + phoneNumber + '}';
+        return "Contact{" + "id" + " contact is '" + contact + '\'' + "Phone number is: " + address + '}';
     }
 
 
